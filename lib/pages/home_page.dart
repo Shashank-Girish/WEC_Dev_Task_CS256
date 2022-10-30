@@ -401,7 +401,8 @@ class _MainPageState extends State<MainPage> {
                                         //print(data);
                                       });
                                     },
-                                    label: Text("Task Done", style: TextStyle(
+                                    label: Text(data![index][data![index].keys.first
+                                        .toString()][3]==0? "Task Done": "Task Avoided", style: TextStyle(
                                         color: (data![index][data![index].keys.first
                                             .toString()][4]) ? Colors.blue : Colors
                                             .grey),),

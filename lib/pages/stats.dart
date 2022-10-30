@@ -141,15 +141,15 @@ class _StatsState extends State<Stats> {
 
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Good Habit, 75% sucess",style: TextStyle(backgroundColor: Colors.green,color: Colors.white),),
+                child: Text("Good Habit, 75% + sucess",style: TextStyle(backgroundColor: Colors.green,color: Colors.white),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Good Habit, 50% sucess",style: TextStyle(backgroundColor: Colors.greenAccent,color: Colors.white),),
+                child: Text("Good Habit, 50% + sucess",style: TextStyle(backgroundColor: Colors.greenAccent,color: Colors.white),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Bad Habit, Not maintained well",style: TextStyle(backgroundColor: Colors.red,color: Colors.white),),
+                child: Text("Good Habit, Not maintained well",style: TextStyle(backgroundColor: Colors.red,color: Colors.white),),
               ),
               Text("About Bad Habits",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
               SizedBox(
@@ -171,11 +171,11 @@ class _StatsState extends State<Stats> {
 
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Bad Habit, 75% rate of combat",style: TextStyle(backgroundColor: Colors.green,color: Colors.white),),
+                child: Text("Bad Habit, 75% + rate of combat",style: TextStyle(backgroundColor: Colors.green,color: Colors.white),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Bad Habit, 50% rate of combat",style: TextStyle(backgroundColor: Colors.greenAccent,color: Colors.white),),
+                child: Text("Bad Habit, 50% + rate of combat",style: TextStyle(backgroundColor: Colors.greenAccent,color: Colors.white),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
