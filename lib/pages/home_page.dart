@@ -455,9 +455,9 @@ class _MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
               icon: GestureDetector(
                   child: Icon(Icons.add),
-                onTap: (){
-                    setState(() {
-                      Navigator.pushNamed(context, '/info');
+                onTap: () async{
+                  await Navigator.pushNamed(context, '/info');
+                  setState(() {
                     });
                 },
               ),
@@ -482,7 +482,7 @@ class _MainPageState extends State<MainPage> {
         child: Icon(Icons.logout),
         onPressed: () {
           setState(() {
-            FirebaseAuth.instance.signOut().timeout(Duration(seconds: 10),onTimeout: ()=>Navigator.pushReplacementNamed(context, '/'));
+            FirebaseAuth.instance.signOut();
           });
         }
     ),

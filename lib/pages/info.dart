@@ -123,7 +123,7 @@ class _InfoState extends State<Info> {
 
 
                   });
-                  Navigator.pushReplacementNamed(context, '/home');
+                  Navigator.pop(context);
 
                 }, child: Text("Save")
                 ),
