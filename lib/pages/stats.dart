@@ -29,7 +29,7 @@ class _StatsState extends State<Stats> {
           .now()
           .difference(
           data![i][nam][0])
-          .inDays;
+          .inDays+1;
       var act_days = data![i][nam][1];
       if (data![i][nam][3]==0){
         if (act_days/days_tlt>=0.75){
@@ -94,10 +94,10 @@ class _StatsState extends State<Stats> {
                 child: PieChart(
                   PieChartData(
                     sections: [
-                      PieChartSectionData(title: "",value: double.parse(gd_hgh.toString()),color: Colors.green),
-                      PieChartSectionData(title: "",value: double.parse(gd_low.toString()),color: Colors.green[300]),
-                      PieChartSectionData(title: "",value: double.parse(bd_hgh.toString()),color: Colors.blue),
-                      PieChartSectionData(title: "",value: double.parse(bd_low.toString()),color: Colors.blue[300])
+                      PieChartSectionData(title: "$gd_hgh",value: double.parse(gd_hgh.toString()),color: Colors.green),
+                      PieChartSectionData(title: "$gd_low",value: double.parse(gd_low.toString()),color: Colors.green[300]),
+                      PieChartSectionData(title: "$bd_hgh",value: double.parse(bd_hgh.toString()),color: Colors.blue),
+                      PieChartSectionData(title: "$bd_low",value: double.parse(bd_low.toString()),color: Colors.blue[300])
                     ]
                   )
                 ),
@@ -128,9 +128,9 @@ class _StatsState extends State<Stats> {
                 child: PieChart(
                     PieChartData(
                         sections: [
-                          PieChartSectionData(title: "",value: double.parse(gd_75.toString()),color: Colors.green),
-                          PieChartSectionData(title: "",value: double.parse(gd_50.toString()),color: Colors.greenAccent),
-                          PieChartSectionData(title: "",value: double.parse(gdl50.toString()),color: Colors.red),
+                          PieChartSectionData(title: "$gd_75",value: double.parse(gd_75.toString()),color: Colors.green),
+                          PieChartSectionData(title: "$gd_50",value: double.parse(gd_50.toString()),color: Colors.greenAccent),
+                          PieChartSectionData(title: "$gdl50",value: double.parse(gdl50.toString()),color: Colors.red),
 
                         ]
                     )
@@ -158,9 +158,9 @@ class _StatsState extends State<Stats> {
                 child: PieChart(
                     PieChartData(
                         sections: [
-                          PieChartSectionData(title: "",value: double.parse(bd_75.toString()),color: Colors.green),
-                          PieChartSectionData(title: "",value: double.parse(bd_50.toString()),color: Colors.greenAccent),
-                          PieChartSectionData(title: "",value: double.parse(bdl50.toString()),color: Colors.red),
+                          PieChartSectionData(title: "$bd_75",value: double.parse(bd_75.toString()),color: Colors.green),
+                          PieChartSectionData(title: "$bd_50",value: double.parse(bd_50.toString()),color: Colors.greenAccent),
+                          PieChartSectionData(title: "$bdl50",value: double.parse(bdl50.toString()),color: Colors.red),
 
                         ]
                     )

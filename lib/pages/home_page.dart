@@ -47,6 +47,7 @@ class _MainPageState extends State<MainPage> {
     //await Future.delayed(Duration(seconds: 5));
     List<dynamic>? data;
     data =a.get(uname);
+
     var m=(data==null)? 0:data!.length;
     for(int i=0;i<m;i++){
       var nam=data![i].keys.first.toString();
@@ -205,7 +206,7 @@ class _MainPageState extends State<MainPage> {
                                                   Row(
                                                     children: [
                                                       Text("Habit Name: ",style: TextStyle(fontWeight: FontWeight.bold),),
-                                                      Text("${data![index].keys.first.toString()}")
+                                                      Expanded(child: Text("${data![index].keys.first.toString()}"))
 
                                                     ],
                                                   ),
@@ -481,7 +482,7 @@ class _MainPageState extends State<MainPage> {
         child: Icon(Icons.logout),
         onPressed: () {
           setState(() {
-            FirebaseAuth.instance.signOut();
+            FirebaseAuth.instance.signOut().timeout(Duration(seconds: 10),onTimeout: ()=>Navigator.pushReplacementNamed(context, '/'));
           });
         }
     ),
